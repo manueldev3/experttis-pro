@@ -1,0 +1,39 @@
+{
+  "name": "experttisv2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "antd": "^5.9.3",
+    "bootstrap": "^5.3.2",
+    "firebase": "^10.4.0",
+    "firebase-admin": "^11.10.1",
+    "flowbite": "^1.8.1",
+    "moment": "^2.29.4",
+    "next": "latest",
+    "react": "latest",
+    "react-bootstrap": "^2.9.0",
+    "react-dom": "latest",
+    "react-hook-form": "^7.46.2",
+    "react-select": "^5.7.5",
+    "react-timezone-select": "^2.1.2",
+    "sass": "^1.68.0"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "encoding": "^0.1.13",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

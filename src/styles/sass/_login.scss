@@ -1,0 +1,46 @@
+@use "helpers";
+@use "responsive";
+@import "colors";
+
+$default-max-width: 480px;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.login {
+  @include helpers.unify-parent("section") {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid $grey-transparent-color;
+    width: calc(100% - 32px);
+    margin: 64px 0;
+    padding: 16px;
+
+    @include responsive.tablet {
+      max-width: $default-max-width;
+    }
+
+    & > h3 {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.submit-button {
+  @include helpers.unify-parent("button") {
+    background-color: $primary-color;
+    border-radius: 0;
+    float: right;
+
+    &:disabled {
+      background-color: $grey-transparent-color;
+    }
+  }
+}

@@ -1,0 +1,1728 @@
+/* latin-ext */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjxAwXjeu.woff2) format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+html {
+  font-family: Lato;
+}
+
+body {
+  font-family: Lato;
+}
+
+section.registration {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  width: calc(100% - 32px);
+  margin: 16px 0;
+  padding: 16px;
+}
+@media only screen and (min-width: 1300px) {
+  section.registration {
+    max-width: 1200px;
+  }
+}
+section.registration > h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.registration > #registration_consultant > .personal,
+.registration > #registration_consultant .sign-up,
+.registration > #registration_consultant .agreement {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 0 16px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+.registration > #registration_consultant > .personal > h4,
+.registration > #registration_consultant .sign-up > h4,
+.registration > #registration_consultant .agreement > h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.registration > #registration_consultant > .personal > .inline-fields,
+.registration > #registration_consultant .sign-up > .inline-fields,
+.registration > #registration_consultant .agreement > .inline-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.registration > #registration_consultant > .agreement > .terms {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 1rem;
+}
+.registration > #registration_consultant > button.submit-button {
+  background-color: #00263a;
+  border-radius: 0;
+  float: right;
+}
+.registration > #registration_consultant > button.submit-button:disabled {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.experttis-input {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  .experttis-input {
+    width: 370px;
+  }
+}
+
+button.submit-button {
+  background-color: #00263a;
+  border-radius: 0;
+  float: right;
+}
+button.submit-button:disabled {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.agreement {
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  padding: 0 16px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+.agreement > h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.agreement > .terms {
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 1rem;
+}
+.agreement > .inline-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+section.login {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: calc(100% - 32px);
+  margin: 64px 0;
+  padding: 16px;
+}
+@media only screen and (min-width: 700px) {
+  section.login {
+    max-width: 480px;
+  }
+}
+section.login > h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+button.submit-button {
+  background-color: #00263a;
+  border-radius: 0;
+  float: right;
+}
+button.submit-button:disabled {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+section.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin: 16px;
+  width: 100%;
+  clear: both;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #e9ecef;
+}
+@media only screen and (min-width: 1300px) {
+  section.jumbotron {
+    max-width: 1080px;
+  }
+}
+
+.chat__section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.chat__container {
+  width: 80%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 38, 58, 0.1);
+  box-shadow: 0px 13px 70px -9px rgba(0, 0, 0, 0.1);
+}
+.chat__container .sidebar,
+.chat__container .chat {
+  padding: 5px;
+  height: 100%;
+}
+.chat__container .sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 280px;
+  gap: 2px;
+  border-right: 1px solid rgba(0, 38, 58, 0.1);
+}
+.chat__container .chat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 3;
+  background-color: white;
+}
+.chat__container .chat_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 12px;
+  background-color: #ff9e16;
+  padding: 10px;
+  position: relative;
+}
+.chat__container .chat_head > p {
+  margin: 2px;
+  font-weight: bold;
+}
+.chat__container .chat_head > button {
+  border: none;
+  border-radius: 50%;
+  background-color: #ff9e16;
+}
+.chat__container .chat_head > button > span > svg {
+  width: 15px;
+  height: 15px;
+}
+.chat__container .chat_head .dropdown {
+  min-width: 180px;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  border: 1px solid rgba(33, 37, 41, 0.2);
+}
+.chat__container .chat_head .dropdown > ul {
+  margin: 0;
+  padding: 0;
+}
+.chat__container .chat_head .dropdown > ul > li {
+  list-style: none;
+}
+.chat__container .chat_head .dropdown > ul > li > button {
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+.chat__container .chat_head .dropdown > ul > li .delete {
+  color: white;
+  background-color: red;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 20px;
+  color: white;
+  border-radius: 12px;
+  background-color: #26cad3;
+}
+.navbar > .type {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.navbar > .user > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.navbar > .user > span {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.searchChat {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  border-radius: 12px 12px 0 0;
+  background-color: #212529;
+}
+.searchChat .searchForm {
+  width: 100%;
+}
+.searchChat .searchForm > input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  color: black;
+  padding: 5px 10px;
+  transition: 0.1s;
+}
+.searchChat .searchForm > input:focus {
+  border: 2px solid #26cad3;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 0 0 12px 12px;
+  background-color: #212529;
+  animation-name: showTransition;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.chats > h3 {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.userchat {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  border-radius: 12px;
+  transition: 0.1s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #212529;
+}
+.userchat > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.userchat_info > span {
+  font-weight: bold;
+  color: #ff9e16;
+}
+.userchat_info > p {
+  color: white;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.userchat:hover {
+  cursor: pointer;
+  background-color: #26cad3;
+}
+.userchat:hover > .userchat_info > span {
+  color: white;
+}
+
+.messages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  height: 100%;
+  gap: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+.messages > .message {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 5px;
+  border-radius: 12px;
+}
+.messages > .message > .message__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+}
+.messages > .message > .message__info > .message__info-avatar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.messages > .message > .message__info > .message__info-avatar > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.messages > .message > .message__info > .message__info-avatar > span {
+  font-weight: 200;
+  font-size: 0.8rem;
+  color: gray;
+}
+.messages > .message > .message__info > p {
+  font-weight: 600;
+  margin: 0;
+  padding: 5px 10px;
+  color: white;
+}
+.messages > .message > .message__img > img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+}
+.messages > .message > a {
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: rgb(137, 205, 34);
+}
+.messages > .sender {
+  align-items: flex-end;
+}
+.messages > .sender > div > p {
+  background-color: #26cad3;
+  border-radius: 12px 0 12px 12px;
+  margin-right: 20px;
+}
+.messages > .addressee {
+  align-self: flex-start;
+}
+.messages > .addressee > div {
+  flex-direction: row-reverse;
+}
+.messages > .addressee > div > p {
+  background-color: #ff9e16;
+  border-radius: 0 12px 12px 12px;
+  margin-left: 20px;
+}
+
+.init {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.init > h3 {
+  font-size: 1rem;
+  color: gray;
+}
+
+.input_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 5px;
+  margin: 5px 0;
+}
+.input_container .input_message {
+  width: 75%;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  color: black;
+  padding: 10px;
+  transition: 0.1s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.input_container .input_message:focus {
+  border: 2px solid #26cad3;
+}
+.input_container .attach {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.input_container .attach > label > svg {
+  cursor: pointer;
+}
+.input_container > button {
+  width: 15%;
+  min-width: 120px;
+  border: none;
+  color: white;
+  transition: 0.1s;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #26cad3;
+}
+.input_container > button:hover {
+  transform: scale(1.04);
+}
+.input_container > button:active {
+  transform: scale(1);
+}
+
+/* ------------------ Float chat ------------------ */
+.floatChat__container {
+  min-width: 420px;
+  position: fixed;
+  right: 12%;
+  bottom: 0;
+  padding: 5px;
+  border-radius: 12px 12px 0 0;
+  background-color: rgba(255, 158, 22, 0.9);
+  box-shadow: 0px 13px 70px -9px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.floatChat__container-head, .floatChat__container-info {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
+.floatChat__container-head > h3, .floatChat__container-info > h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 5px 0 5px;
+}
+.floatChat__container-head .length, .floatChat__container-info .length {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 100%;
+  background-color: rgb(0, 191, 0);
+}
+.floatChat__container-head .close,
+.floatChat__container-head .close-conversation, .floatChat__container-info .close,
+.floatChat__container-info .close-conversation {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+}
+.floatChat__container-head .close, .floatChat__container-info .close {
+  position: absolute;
+  right: 10px;
+}
+.floatChat__container-head .close-conversation, .floatChat__container-info .close-conversation {
+  margin-left: 5px;
+}
+.floatChat__container-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+.floatChat__container-info > span {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.floatChat__container-info > p {
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin: 0;
+  padding: 5px 10px;
+  color: white;
+  background-color: #212529;
+  border-radius: 12px;
+}
+
+.fmessages {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 550px;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 5px;
+  overflow-y: auto;
+  background-color: #212529;
+}
+.fmessages > .fmessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 5px;
+  border-radius: 12px;
+}
+.fmessages > .fmessage > .message__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+}
+.fmessages > .fmessage > .message__info > .message__info-avatar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.fmessages > .fmessage > .message__info > .message__info-avatar > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.fmessages > .fmessage > .message__info > .message__info-avatar > span {
+  font-weight: 200;
+  font-size: 0.6rem;
+  color: rgb(188, 188, 188);
+}
+.fmessages > .fmessage > .message__info > p {
+  margin: 0;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.fmessages > .fmessage > .message__img > img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+}
+.fmessages > .fmessage > a {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: rgb(137, 205, 34);
+}
+.fmessages > .sender {
+  align-self: flex-end;
+}
+.fmessages > .sender > div > p {
+  background-color: rgba(38, 202, 211, 0.6);
+  border-radius: 12px 0 12px 12px;
+  margin-right: 20px;
+}
+.fmessages > .sender > .message__img,
+.fmessages > .sender a {
+  align-self: flex-end;
+}
+.fmessages > .addressee {
+  align-self: flex-start;
+}
+.fmessages > .addressee > div {
+  flex-direction: row-reverse;
+}
+.fmessages > .addressee > div > p {
+  background-color: rgba(255, 158, 22, 0.6);
+  border-radius: 0 12px 12px 12px;
+  margin-left: 10px;
+}
+.fmessages > .addressee > .message__img,
+.fmessages > .addressee a {
+  align-self: flex-start;
+}
+
+@keyframes showTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+header.navigation {
+  display: flex;
+  justify-content: center;
+}
+header.navigation > .navigation-content {
+  background-color: #f1f1f2 !important;
+  min-width: 100%;
+  border-top: 1px solid #00263a;
+}
+@media only screen and (min-width: 1300px) {
+  header.navigation > .navigation-content {
+    min-width: 1440px;
+  }
+}
+
+.logo {
+  width: 150px;
+  height: 55px;
+}
+@media only screen and (min-width: 1300px) {
+  .logo {
+    width: 280px;
+    height: 94px;
+  }
+}
+
+#basic-nav-dropdown,
+.nav-link {
+  color: #00263a !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+#basic-nav-dropdown.show {
+  color: #26cad3 !important;
+}
+
+#basic-nav-dropdown::after {
+  display: none;
+}
+
+.dropdown-menu {
+  background-color: #f1f1f2;
+  border: none;
+}
+
+.dropdown-item {
+  color: #00263a !important;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.dropdown-item:active {
+  color: #26cad3 !important;
+  text-decoration: none;
+  background-color: #007bff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (min-width: 1300px) {
+  main > .carousel {
+    max-width: 1440px !important;
+  }
+}
+
+.carousel-item > img {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  .carousel-item > img {
+    height: 800px;
+  }
+}
+.carousel-item > .carousel-item-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item > .carousel-item-item > h2 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 32px;
+}
+@media only screen and (min-width: 1300px) {
+  .carousel-item > .carousel-item-item > h2 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+}
+
+section.search {
+  background-color: #00263a;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 1300px) {
+  section.search {
+    max-width: 1440px;
+  }
+}
+
+.search-field {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 54px !important;
+  border-radius: 20px;
+  align-items: center;
+  padding: 3px;
+}
+@media only screen and (min-width: 1300px) {
+  .search-field {
+    width: 700px;
+  }
+}
+.search-field > .search-input {
+  border: transparent;
+  border-radius: 18px;
+  padding-left: 23px;
+  height: 48px;
+  margin-right: -24px;
+}
+.search-field > .search-input::placeholder {
+  font-weight: 500;
+}
+@media only screen and (min-width: 700px) {
+  .search-field > .search-input::placeholder {
+    font-size: 1.2rem !important;
+  }
+}
+.search-field > .search-input:focus {
+  box-shadow: 0 0 0 2px #00263a;
+}
+.search-field > .search-icon {
+  position: relative;
+  right: 16px;
+  color: grey;
+  font-size: 24px;
+}
+
+section.enjoy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  width: 100%;
+  background-color: #f1f1f2;
+  text-align: center;
+}
+@media only screen and (min-width: 1300px) {
+  section.enjoy {
+    max-width: 1440px;
+  }
+}
+section.enjoy > h2 {
+  font-weight: 700;
+}
+
+button.btn-primary {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  background-color: #00263a;
+  border-radius: 1px;
+}
+
+section.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+section.features > h2.title {
+  background-color: #ff9e16;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 1300px) {
+  section.features > h2.title {
+    max-width: 1440px;
+  }
+}
+section.features > .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 16px;
+  width: 100%;
+}
+@media only screen and (min-width: 1300px) {
+  section.features > .wrapper {
+    margin: 32px;
+    max-width: 1080px;
+  }
+}
+section.features > .wrapper > .col {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 64px;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width: 1000px) {
+  section.features > .wrapper > .col {
+    margin: 0 16px;
+  }
+}
+section.features > .wrapper > .col > h4.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+}
+section.features > .wrapper > .col > span {
+  font-size: 12px;
+}
+
+section.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+}
+section.works > h2.title {
+  background-color: #00263a;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 1300px) {
+  section.works > h2.title {
+    max-width: 1440px;
+  }
+}
+section.works > h2.yellow {
+  color: #ff9e16;
+  font-weight: bold;
+}
+section.works > h2.blue {
+  color: #00263a;
+  font-weight: bold;
+  margin-top: 16px;
+  max-width: 900px;
+  text-align: center;
+}
+section.works > .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 16px;
+  width: 100%;
+}
+@media only screen and (min-width: 1300px) {
+  section.works > .wrapper {
+    margin: 32px;
+    max-width: 1080px;
+  }
+}
+section.works > .wrapper > .col {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 64px;
+  align-items: center;
+  text-align: center;
+}
+@media only screen and (min-width: 1000px) {
+  section.works > .wrapper > .col {
+    margin: 0 16px;
+  }
+}
+section.works > .wrapper > .col > h4.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+}
+section.works > .wrapper > .col > span {
+  font-size: 12px;
+}
+
+section.friendly {
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+  flex-direction: column;
+}
+section.friendly > h2.title {
+  width: 100%;
+  background-color: #26cad3;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+section.friendly > h2.subtitle {
+  color: #00263a;
+  font-weight: bold;
+  max-width: 900px;
+  text-align: center;
+}
+section.friendly > h2.subtitle > span {
+  color: #26cad3;
+}
+section.friendly > ul > li {
+  font-size: 1.1rem;
+  list-style-type: disc;
+}
+section.friendly > .become {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background-image: url(../../assets/img//become-consultant.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+section.friendly > .become > h2 {
+  font-size: 2.4rem;
+  color: white;
+  font-weight: bold;
+}
+
+section.foundations {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+section.foundations > .bg-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background-image: url(../../assets/img/foundations.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+section.foundations > .bg-image > h2 {
+  font-size: 2.4rem;
+}
+section.foundations > .bg-image > h2,
+section.foundations > .bg-image p {
+  color: white;
+  font-weight: bold;
+}
+section.foundations > ul {
+  padding: 20px 0;
+}
+section.foundations > ul > li {
+  width: max-content;
+  margin: 0 auto 10px auto;
+}
+
+section.contact {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+section.contact > .bg-image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background-image: url(../../assets/img/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+section.contact > .bg-image > h2 {
+  font-size: 2.4rem;
+}
+section.contact > .bg-image > h2,
+section.contact > .bg-image p {
+  color: white;
+  font-weight: bold;
+}
+section.contact > .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  padding: 40px 0;
+  width: 100%;
+}
+@media only screen and (min-width: 1300px) {
+  section.contact > .wrapper {
+    margin: 32px;
+    max-width: 1080px;
+  }
+}
+section.contact > .wrapper > .col-two {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.contact > .wrapper > .col-two > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.contact > .wrapper > .col-two > div > h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+section.contact > .wrapper > .col-two > div > p {
+  margin: 0;
+  text-align: center;
+}
+section.contact > .wrapper > .col-two > div > div > p {
+  margin-right: 5px;
+  text-align: center;
+}
+section.contact > .wrapper > .col-two > div > div > a {
+  text-align: center;
+}
+
+section.selection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 0;
+}
+section.selection > h2.title {
+  width: 100%;
+  background-color: #00263a;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+section.selection > h2.subtitle {
+  color: #00263a;
+  font-weight: bold;
+  max-width: 900px;
+  text-align: center;
+}
+section.selection > h2.subtitle > span {
+  color: #26cad3;
+}
+section.selection > .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  width: 100%;
+}
+@media only screen and (min-width: 1300px) {
+  section.selection > .wrapper {
+    margin: 32px;
+    max-width: 1080px;
+  }
+}
+section.selection > .wrapper > .col-one {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 64px;
+  text-align: center;
+}
+section.selection > .wrapper > .col-one > img {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  section.selection > .wrapper > .col-one {
+    margin: 0 16px;
+    width: 55%;
+  }
+}
+section.selection > .wrapper > .col-one > h4.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+}
+section.selection > .wrapper > .col-one > span {
+  font-size: 12px;
+}
+section.selection > .wrapper > .col-one > ul {
+  text-align: left;
+}
+section.selection > .wrapper > .col-two {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 64px;
+  text-align: center;
+}
+section.selection > .wrapper > .col-two > img {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  section.selection > .wrapper > .col-two {
+    margin: 0 16px;
+    width: 39%;
+  }
+}
+section.selection > .wrapper > .col-two > h4.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+}
+section.selection > .wrapper > .col-two > span {
+  font-size: 12px;
+}
+section.selection > .wrapper > .col-two > ul {
+  text-align: left;
+}
+section.selection > .wrapper > .col-two > ul > li {
+  list-style: disc;
+  margin-bottom: 10px;
+}
+
+section.asistance {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+section.asistance > h2.title {
+  width: 100%;
+  background-color: #ff9e16;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+section.asistance > .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 10px;
+  align-items: center;
+  padding: 40px 0;
+  width: 100%;
+}
+@media only screen and (min-width: 1300px) {
+  section.asistance > .wrapper {
+    margin: 32px;
+    max-width: 1080px;
+  }
+}
+section.asistance > .wrapper > .col-one {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 64px;
+  text-align: center;
+}
+section.asistance > .wrapper > .col-one > img {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  section.asistance > .wrapper > .col-one {
+    margin: 0 16px;
+    width: 55%;
+  }
+}
+section.asistance > .wrapper > .col-two > div > h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+section.asistance > .wrapper > .col-two > div > p {
+  margin: 0;
+}
+section.asistance > .wrapper > .col-two > div > div > p {
+  margin-right: 5px;
+}
+
+section.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+}
+section.fields > h2.title {
+  background-color: #26cad3;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 1300px) {
+  section.fields > h2.title {
+    max-width: 1440px;
+  }
+}
+section.fields > h2.subtitle {
+  color: #00263a;
+  font-weight: bold;
+  max-width: 900px;
+  text-align: center;
+}
+section.fields > h2.subtitle > span {
+  color: #26cad3;
+}
+section.fields > .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px;
+  width: 100%;
+}
+@media only screen and (min-width: 1300px) {
+  section.fields > .wrapper {
+    margin: 32px;
+    max-width: 1080px;
+  }
+}
+section.fields > .wrapper > .col-one {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 64px;
+  text-align: center;
+}
+section.fields > .wrapper > .col-one > img {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  section.fields > .wrapper > .col-one {
+    margin: 0 16px;
+    width: 55%;
+  }
+}
+section.fields > .wrapper > .col-one > h4.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+}
+section.fields > .wrapper > .col-one > span {
+  font-size: 12px;
+}
+section.fields > .wrapper > .col-one > ul {
+  text-align: left;
+}
+section.fields > .wrapper > .col-two {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 64px;
+  text-align: center;
+}
+section.fields > .wrapper > .col-two > img {
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+  section.fields > .wrapper > .col-two {
+    margin: 0 16px;
+    width: 39%;
+  }
+}
+section.fields > .wrapper > .col-two > h4.title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+}
+section.fields > .wrapper > .col-two > span {
+  font-size: 12px;
+}
+section.fields > .wrapper > .col-two > ul {
+  text-align: left;
+}
+
+section.academic {
+  background-color: #f1f1f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+}
+@media only screen and (min-width: 1300px) {
+  section.academic {
+    max-width: 1440px;
+  }
+}
+section.academic > .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px;
+}
+@media only screen and (min-width: 1000px) {
+  section.academic > .wrapper > .col-one {
+    width: 40%;
+    margin-right: 16px;
+  }
+}
+section.academic > .wrapper > .col-one > h2.title,
+section.academic > .wrapper > .col-one h4 {
+  font-weight: bold;
+}
+section.academic > .wrapper > .col-one > h4 {
+  font-size: 20px;
+}
+section.academic > .wrapper > .col-two > img {
+  width: 100%;
+}
+
+section.subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+section.subscription > img {
+  margin: 40px 0;
+}
+section.subscription > h2.title {
+  background-color: #ff9e16;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 1300px) {
+  section.subscription > h2.title {
+    max-width: 1440px;
+  }
+}
+section.subscription > h2.subtitle {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 1000px) {
+  section.subscription > h2.subtitle {
+    max-width: 768px;
+  }
+}
+section.subscription > h2.subtitle > span {
+  color: #ff9e16;
+}
+section.subscription > .subscriptions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section.subscription > .subscriptions > .individual {
+  margin: 16px;
+  width: 298px;
+}
+section.subscription > .subscriptions > .individual > h2.title {
+  background-color: #ff9e16;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+section.subscription > .subscriptions > .individual > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff9e16;
+  height: 600px;
+  width: 298px;
+  margin-bottom: 16px;
+}
+section.subscription > .subscriptions > .individual > .content > .price {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 16px 0;
+}
+section.subscription > .subscriptions > .individual > .content > ul {
+  color: white;
+}
+section.subscription > .subscriptions > .individual > button {
+  width: 100%;
+  background-color: #ff9e16;
+  border: none;
+}
+section.subscription > .subscriptions > .individual > button:active {
+  background-color: grey;
+}
+section.subscription > .subscriptions > .business {
+  margin: 16px;
+  width: 298px;
+}
+section.subscription > .subscriptions > .business > h2.title {
+  background-color: #00263a;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+section.subscription > .subscriptions > .business > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00263a;
+  height: 600px;
+  width: 298px;
+  margin-bottom: 16px;
+}
+section.subscription > .subscriptions > .business > .content > h2.title {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 16px;
+}
+section.subscription > .subscriptions > .business > .content > h3.title {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+section.subscription > .subscriptions > .business > .content > .price {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+section.subscription > .subscriptions > .business > .content > p.description {
+  color: white;
+  text-transform: uppercase;
+  width: 60%;
+  text-align: center;
+}
+section.subscription > .subscriptions > .business > .content > ul {
+  color: white;
+}
+section.subscription > .subscriptions > .business > button {
+  width: 100%;
+  background-color: #00263a;
+  border: none;
+}
+section.subscription > .subscriptions > .business > button:active {
+  background-color: grey;
+}
+section.subscription > .subscriptions > .academic {
+  margin: 16px;
+  width: 298px;
+}
+@media only screen and (min-width: 1300px) {
+  section.subscription > .subscriptions > .academic {
+    width: auto;
+  }
+}
+section.subscription > .subscriptions > .academic > h2.title {
+  background-color: #26cad3;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+section.subscription > .subscriptions > .academic > .plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.subscription > .subscriptions > .academic > .plans > .space {
+  width: 44px;
+}
+section.subscription > .subscriptions > .academic > .plans > .institution > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #26cad3;
+  height: 600px;
+  width: 298px;
+  margin-bottom: 16px;
+  padding: 44px 0;
+}
+section.subscription > .subscriptions > .academic > .plans > .institution > .content > .space > h2.title {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+section.subscription > .subscriptions > .academic > .plans > .institution > .content > .space > .price {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+section.subscription > .subscriptions > .academic > .plans > .institution > .content > p.description {
+  color: white;
+  text-transform: uppercase;
+  width: 48%;
+  text-align: center;
+}
+section.subscription > .subscriptions > .academic > .plans > .institution > button {
+  width: 100%;
+  background-color: #26cad3;
+  border: none;
+  margin-bottom: 32px;
+}
+section.subscription > .subscriptions > .academic > .plans > .institution > button:active {
+  background-color: grey;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #26cad3;
+  height: 600px;
+  width: 298px;
+  margin-bottom: 16px;
+  padding: 44px 0;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > .content > .space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > .content > .space > h2.title {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 16px;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > .content > .space > .price {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > .content > p.description {
+  color: white;
+  text-transform: uppercase;
+  width: 60%;
+  text-align: center;
+  margin-top: 16px;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > .content > ul {
+  color: white;
+  width: 70%;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > button {
+  width: 100%;
+  background-color: #26cad3;
+  border: none;
+}
+section.subscription > .subscriptions > .academic > .plans > .students > button:active {
+  background-color: grey;
+}
+
+.list {
+  list-style: disc;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+footer > .footer-content {
+  width: 100%;
+  background-color: #555559;
+  padding: 16px;
+}
+@media only screen and (min-width: 1300px) {
+  footer > .footer-content {
+    max-width: 1440px;
+  }
+}
+footer > div.footer-bottom {
+  background-color: #ff9e16;
+  width: 100%;
+  height: 32px;
+}
+@media only screen and (min-width: 1300px) {
+  footer > div.footer-bottom {
+    max-width: 1440px;
+  }
+}
+
+.not-verify-email {
+  width: 100%;
+  border-radius: 0;
+}
+@media only screen and (min-width: 1300px) {
+  .not-verify-email {
+    max-width: 1440px;
+  }
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,119 @@
+@use "helpers";
+@use "responsive";
+
+$default-max-width: 1200px;
+$grey-transparent-color: rgba(0, 0, 0, 0.15);
+$background-primary: #f1f1f2;
+$primary-color: #00263a;
+$secondary-color: #26cad3;
+$yellow-color: #ff9e16;
+$cyan-color: #26cad3;
+
+.registration {
+  @include helpers.unify-parent("section") {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $grey-transparent-color;
+    width: calc(100% - 32px);
+    margin: 16px 0;
+    padding: 16px;
+
+    @include responsive.laptop {
+      max-width: $default-max-width;
+    }
+
+    & > h3 {
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+    }
+  }
+
+  & > #registration_consultant {
+    & > .personal,
+    .sign-up,
+    .agreement {
+      border: 2px solid $grey-transparent-color;
+      padding: 0 16px;
+      padding-top: 16px;
+      margin-bottom: 16px;
+
+      & > h4 {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+
+      & > .inline-fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+
+    & > .agreement {
+      & > .terms {
+        height: 200px;
+        overflow-y: scroll;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        padding: 1rem;
+      }
+    }
+
+    & > .submit-button {
+      @include helpers.unify-parent("button") {
+        background-color: $primary-color;
+        border-radius: 0;
+        float: right;
+
+        &:disabled {
+          background-color: $grey-transparent-color;
+        }
+      }
+    }
+  }
+}
+
+.experttis-input {
+  width: 100%;
+
+  @include responsive.miniLaptop {
+    width: 370px;
+  }
+}
+
+.submit-button {
+  @include helpers.unify-parent("button") {
+    background-color: $primary-color;
+    border-radius: 0;
+    float: right;
+
+    &:disabled {
+      background-color: $grey-transparent-color;
+    }
+  }
+}
+
+.agreement {
+  border: 2px solid $grey-transparent-color;
+  padding: 0 16px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+
+  & > h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  & > .terms {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 1rem;
+  }
+
+  & > .inline-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

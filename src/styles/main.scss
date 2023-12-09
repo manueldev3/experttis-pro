@@ -1,0 +1,1150 @@
+@use "./sass/fonts";
+@use "./sass//responsive";
+@use "./sass/helpers";
+@use "./sass/register";
+@use "./sass/login";
+@use "./sass/clients";
+@use "./sass/thanks";
+@use "./sass/chat";
+@import "./sass/colors";
+
+.navigation {
+  @include helpers.unify-parent("header") {
+    display: flex;
+    justify-content: center;
+
+    & > .navigation-content {
+      background-color: $background-primary !important;
+      min-width: 100%;
+      border-top: 1px solid $primary-color;
+
+      @include responsive.laptop {
+        min-width: 1440px;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 150px;
+  height: 55px;
+
+  @include responsive.laptop {
+    width: 280px;
+    height: 94px;
+  }
+}
+
+#basic-nav-dropdown,
+.nav-link {
+  color: $primary-color !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+#basic-nav-dropdown.show {
+  color: $secondary-color !important;
+}
+
+#basic-nav-dropdown {
+  &::after {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  background-color: $background-primary;
+  border: none;
+}
+
+.dropdown-item {
+  color: $primary-color !important;
+  font-weight: 400;
+  font-size: 1.25rem;
+
+  &:active {
+    color: $secondary-color !important;
+    text-decoration: none;
+    background-color: #007bff;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  & > .carousel {
+    @include responsive.laptop {
+      max-width: 1440px !important;
+    }
+  }
+}
+
+.carousel-item {
+  & > img {
+    width: 100%;
+
+    @include responsive.miniLaptop {
+      height: 800px;
+    }
+  }
+
+  & > .carousel-item-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > h2 {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0 32px;
+
+      @include responsive.laptop {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+section.search {
+  background-color: $primary-color;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+
+  @include responsive.laptop {
+    max-width: 1440px;
+  }
+}
+
+.search-field {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 54px !important;
+  border-radius: 20px;
+  align-items: center;
+  padding: 3px;
+
+  @include responsive.laptop {
+    width: 700px;
+  }
+
+  & > .search-input {
+    border: transparent;
+    border-radius: 18px;
+    padding-left: 23px;
+    height: 48px;
+    margin-right: -24px;
+
+    &::placeholder {
+      font-weight: 500;
+
+      @include responsive.tablet() {
+        font-size: 1.2rem !important;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px $primary-color;
+    }
+  }
+
+  & > .search-icon {
+    position: relative;
+    right: 16px;
+    color: grey;
+    font-size: 24px;
+  }
+}
+
+section.enjoy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  width: 100%;
+  background-color: $background-primary;
+  text-align: center;
+
+  @include responsive.laptop {
+    max-width: 1440px;
+  }
+
+  & > h2 {
+    font-weight: 700;
+  }
+}
+
+button.btn-primary {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  background-color: $primary-color;
+  border-radius: 1px;
+}
+
+section.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  & > h2.title {
+    background-color: $yellow-color;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    @include responsive.laptop {
+      max-width: 1440px;
+    }
+  }
+
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px;
+    width: 100%;
+
+    @include responsive.laptop {
+      margin: 32px;
+      max-width: 1080px;
+    }
+
+    & > .col {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 64px;
+      align-items: center;
+      text-align: center;
+
+      @include responsive.miniLaptop {
+        margin: 0 16px;
+      }
+
+      & > h4.title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 16px;
+      }
+
+      & > span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+section.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+
+  & > h2.title {
+    background-color: $primary-color;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    @include responsive.laptop {
+      max-width: 1440px;
+    }
+  }
+
+  & > h2.yellow {
+    color: $yellow-color;
+    font-weight: bold;
+  }
+
+  & > h2.blue {
+    color: $primary-color;
+    font-weight: bold;
+    margin-top: 16px;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px;
+    width: 100%;
+
+    @include responsive.laptop {
+      margin: 32px;
+      max-width: 1080px;
+    }
+
+    & > .col {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 64px;
+      align-items: center;
+      text-align: center;
+
+      @include responsive.miniLaptop {
+        margin: 0 16px;
+      }
+
+      & > h4.title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 16px;
+      }
+
+      & > span {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+section.friendly {
+  width: 100%;
+  display: flex;
+  background-color: $grey-transparent-color;
+  align-items: center;
+  flex-direction: column;
+  & > h2.title {
+    width: 100%;
+    background-color: $cyan-color;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  & > h2.subtitle {
+    color: $primary-color;
+    font-weight: bold;
+    max-width: 900px;
+    text-align: center;
+
+    & > span {
+      color: $cyan-color;
+    }
+  }
+
+  & > ul {
+    & > li {
+      font-size: 1.1rem;
+      list-style-type: disc;
+    }
+  }
+
+  & > .become {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-image: url(../../assets/img//become-consultant.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    & > h2 {
+      font-size: 2.4rem;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+section.foundations {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & > .bg-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-image: url(../../assets/img/foundations.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    & > h2 {
+      font-size: 2.4rem;
+    }
+    & > h2,
+    p {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  & > ul {
+    padding: 20px 0;
+    & > li {
+      width: max-content;
+      margin: 0 auto 10px auto;
+    }
+  }
+}
+
+section.contact {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  & > .bg-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background-image: url(../../assets/img/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    & > h2 {
+      font-size: 2.4rem;
+    }
+    & > h2,
+    p {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  & > .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 40px 0;
+    width: 100%;
+
+    @include responsive.laptop {
+      margin: 32px;
+      max-width: 1080px;
+    }
+
+    & > .col-two {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        & > h3 {
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+          margin: 0;
+        }
+
+        & > p {
+          margin: 0;
+          text-align: center;
+        }
+
+        & > div {
+          & > p {
+            margin-right: 5px;
+            text-align: center;
+          }
+          & > a {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.selection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 0;
+  & > h2.title {
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  & > h2.subtitle {
+    color: $primary-color;
+    font-weight: bold;
+    max-width: 900px;
+    text-align: center;
+
+    & > span {
+      color: $cyan-color;
+    }
+  }
+
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+
+    @include responsive.laptop {
+      margin: 32px;
+      max-width: 1080px;
+    }
+
+    & > .col-one {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 64px;
+      text-align: center;
+
+      & > img {
+        width: 100%;
+      }
+
+      @include responsive.miniLaptop {
+        margin: 0 16px;
+        width: 55%;
+      }
+
+      & > h4.title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 16px;
+      }
+
+      & > span {
+        font-size: 12px;
+      }
+
+      & > ul {
+        text-align: left;
+      }
+    }
+
+    & > .col-two {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 64px;
+      text-align: center;
+
+      & > img {
+        width: 100%;
+      }
+
+      @include responsive.miniLaptop {
+        margin: 0 16px;
+        width: 39%;
+      }
+
+      & > h4.title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 16px;
+      }
+
+      & > span {
+        font-size: 12px;
+      }
+
+      & > ul {
+        text-align: left;
+        & > li {
+          list-style: disc;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+section.asistance {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  & > h2.title {
+    width: 100%;
+    background-color: $yellow-color;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 40px 0;
+    width: 100%;
+
+    @include responsive.laptop {
+      margin: 32px;
+      max-width: 1080px;
+    }
+
+    & > .col-one {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 64px;
+      text-align: center;
+
+      & > img {
+        width: 100%;
+      }
+
+      @include responsive.miniLaptop {
+        margin: 0 16px;
+        width: 55%;
+      }
+    }
+
+    & > .col-two {
+      & > div {
+        & > h3 {
+          font-size: 1rem;
+          font-weight: bold;
+          margin: 0;
+        }
+
+        & > p {
+          margin: 0;
+        }
+
+        & > div {
+          & > p {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+
+  & > h2.title {
+    background-color: $cyan-color;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    @include responsive.laptop {
+      max-width: 1440px;
+    }
+  }
+
+  & > h2.subtitle {
+    color: $primary-color;
+    font-weight: bold;
+    max-width: 900px;
+    text-align: center;
+
+    & > span {
+      color: $cyan-color;
+    }
+  }
+
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+    width: 100%;
+
+    @include responsive.laptop {
+      margin: 32px;
+      max-width: 1080px;
+    }
+
+    & > .col-one {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 64px;
+      text-align: center;
+
+      & > img {
+        width: 100%;
+      }
+
+      @include responsive.miniLaptop {
+        margin: 0 16px;
+        width: 55%;
+      }
+
+      & > h4.title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 16px;
+      }
+
+      & > span {
+        font-size: 12px;
+      }
+
+      & > ul {
+        text-align: left;
+      }
+    }
+
+    & > .col-two {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 64px;
+      text-align: center;
+
+      & > img {
+        width: 100%;
+      }
+
+      @include responsive.miniLaptop {
+        margin: 0 16px;
+        width: 39%;
+      }
+
+      & > h4.title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 16px;
+      }
+
+      & > span {
+        font-size: 12px;
+      }
+
+      & > ul {
+        text-align: left;
+      }
+    }
+  }
+}
+
+section.academic {
+  background-color: $background-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+
+  @include responsive.laptop {
+    max-width: 1440px;
+  }
+
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+
+    & > .col-one {
+      @include responsive.miniLaptop {
+        width: 40%;
+        margin-right: 16px;
+      }
+
+      & > h2.title,
+      h4 {
+        font-weight: bold;
+      }
+
+      & > h4 {
+        font-size: 20px;
+      }
+    }
+
+    & > .col-two {
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+section.subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  & > img {
+    margin: 40px 0;
+  }
+
+  & > h2.title {
+    background-color: $yellow-color;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    @include responsive.laptop {
+      max-width: 1440px;
+    }
+  }
+
+  & > h2.subtitle {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    @include responsive.miniLaptop {
+      max-width: 768px;
+    }
+
+    & > span {
+      color: $yellow-color;
+    }
+  }
+
+  & > .subscriptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & > .individual {
+      margin: 16px;
+      width: 298px;
+
+      & > h2.title {
+        background-color: $yellow-color;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+
+      & > .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $yellow-color;
+        height: 600px;
+        width: 298px;
+        margin-bottom: 16px;
+
+        & > .price {
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin: 16px 0;
+        }
+
+        & > ul {
+          color: white;
+        }
+      }
+
+      & > button {
+        width: 100%;
+        background-color: $yellow-color;
+        border: none;
+
+        &:active {
+          background-color: grey;
+        }
+      }
+    }
+
+    & > .business {
+      margin: 16px;
+      width: 298px;
+
+      & > h2.title {
+        background-color: $primary-color;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+
+      & > .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        height: 600px;
+        width: 298px;
+        margin-bottom: 16px;
+
+        & > h2.title {
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-top: 16px;
+        }
+
+        & > h3.title {
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        & > .price {
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        & > p.description {
+          color: white;
+          text-transform: uppercase;
+          width: 60%;
+          text-align: center;
+        }
+
+        & > ul {
+          color: white;
+        }
+      }
+
+      & > button {
+        width: 100%;
+        background-color: $primary-color;
+        border: none;
+
+        &:active {
+          background-color: grey;
+        }
+      }
+    }
+
+    & > .academic {
+      margin: 16px;
+      width: 298px;
+
+      @include responsive.laptop {
+        width: auto;
+      }
+
+      & > h2.title {
+        background-color: $cyan-color;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+
+      & > .plans {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        & > .space {
+          width: 44px;
+        }
+
+        & > .institution {
+          & > .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $cyan-color;
+            height: 600px;
+            width: 298px;
+            margin-bottom: 16px;
+            padding: 44px 0;
+
+            & > .space {
+              & > h2.title {
+                color: white;
+                text-transform: uppercase;
+                margin-top: 16px;
+              }
+
+              & > .price {
+                color: white;
+                text-transform: uppercase;
+                font-weight: bold;
+              }
+            }
+
+            & > p.description {
+              color: white;
+              text-transform: uppercase;
+              width: 48%;
+              text-align: center;
+            }
+          }
+
+          & > button {
+            width: 100%;
+            background-color: $cyan-color;
+            border: none;
+            margin-bottom: 32px;
+
+            &:active {
+              background-color: grey;
+            }
+          }
+        }
+
+        & > .students {
+          & > .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $cyan-color;
+            height: 600px;
+            width: 298px;
+            margin-bottom: 16px;
+            padding: 44px 0;
+
+            & > .space {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              & > h2.title {
+                color: white;
+                text-transform: uppercase;
+                margin-top: 16px;
+                width: 50%;
+                text-align: center;
+                font-weight: bold;
+              }
+
+              & > .price {
+                color: white;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 20px;
+              }
+            }
+
+            & > p.description {
+              color: white;
+              text-transform: uppercase;
+              width: 60%;
+              text-align: center;
+              margin-top: 16px;
+            }
+
+            & > ul {
+              color: white;
+              width: 70%;
+            }
+          }
+
+          & > button {
+            width: 100%;
+            background-color: $cyan-color;
+            border: none;
+
+            &:active {
+              background-color: grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.list {
+  list-style: disc;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 100%;
+
+  & > .footer-content {
+    width: 100%;
+    background-color: $background-grey-2;
+    padding: 16px;
+
+    @include responsive.laptop {
+      max-width: 1440px;
+    }
+  }
+
+  & > .footer-bottom {
+    @include helpers.unify-parent("div") {
+      background-color: $yellow-color;
+      width: 100%;
+      height: 32px;
+
+      @include responsive.laptop {
+        max-width: 1440px;
+      }
+    }
+  }
+}
+
+.not-verify-email {
+  width: 100%;
+  border-radius: 0;
+
+  @include responsive.laptop {
+    max-width: 1440px;
+  }
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+}
